@@ -1,0 +1,60 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing:border-box; 
+}
+
+
+
+.container{
+   display:grid;
+   height:100vh; 
+   grid-gap:10px;
+   grid-template-areas:
+   'menu nav nav main1'
+   'menu main2 main3 main4'
+   'menu main5 main6 main4'
+
+}
+
+
+
+nav{grid-area:nav; background-color:red;}
+menu{grid-area: menu; background-color:gold;}
+.main1{grid-area:main1; background-color:green;}
+.main2{grid-area:main2; background-color: blue;}
+.main3{grid-area:main3; background-color: violet;}
+.main4{grid-area:main4; background-color:orange}
+.main5{grid-area:main5; background-color: palevioletred;}
+.main6{grid-area:main6; background-color: indianred;}
+
+
+@media only screen and (max-width: 600px) {
+.container{
+    grid-template-areas:
+    'nav'
+    'menu'
+    'main1'
+    'main2'
+    'main3'
+    'main4'
+    'main5'
+    'main6'
+}
+}
+
+
+@media only screen and (max-width: 700px) {
+    .container{
+        grid-template-areas:
+        'nav nav'
+        'menu menu'
+        'main1 main1'
+        'main2 main2'
+        'main3 main3'
+        'main4 main4'
+        'main5 main5'
+        'main6 main6'
+    }
+    }
+    
